@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<xsd:schema version="1.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">  
+    <xsd:element name="factura">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="registro">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="codigo_factura" fixed="SRI3635"></xsd:element>
+                            <xsd:element name="ruc_empresa" type="xsd:string"></xsd:element>
+                            <xsd:element name="cedula" type="xsd:string"></xsd:element>
+                            <xsd:element name="nombre">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="20"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="apellido" type="xsd:string"></xsd:element>
+                            <xsd:element name="anio">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:integer">
+                                        <xsd:minInclusive value="2012"/>
+                                        <xsd:maxInclusive value="2020"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="mes">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:pattern value="ENERO|FEBRERO|MARZO|ABRIL|MAYO|JUNIO|JULIO|AGOSTO|SEPTIEMBRE|OCTUBRE|NOVIEMBRE|DICIEMBRE"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="dia">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:integer">
+                                        <xsd:minExclusive value="0"/>
+                                        <xsd:maxInclusive value="31"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                           
+                            <xsd:element name="telefono">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"></xsd:pattern>
+                                    </xsd:restriction> 
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="direccion">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="50"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="cantidad" type="xsd:float"></xsd:element>
+                            <xsd:element name="detalle">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="50"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="forma_pago">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:pattern value="EFECTIVO|DINERO ELECTRONICO|TARJETA DE CREDITO|TARJETA DE DEBITO"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="total" type="xsd:float"></xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence> 
+        </xsd:complexType>
+    </xsd:element>                     
+</xsd:schema>

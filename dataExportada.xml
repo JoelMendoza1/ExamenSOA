@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="estilosFactura.css"?>
+<factura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="FacturaXSD.xsd">
+    <registro>
+        <codigo_factura>SRI3635</codigo_factura>
+        <ruc_empresa>1720804432001</ruc_empresa>
+        <cedula>1720804432</cedula>
+        <nombre>Jefferson</nombre>
+        <apellido>Caiza</apellido>
+        <anio>2020</anio>
+        <mes>ENERO</mes>
+        <dia>20</dia>
+        <telefono>0998546467</telefono>
+        <direccion>EL PINTADO</direccion>
+        <cantidad>1</cantidad>
+        <detalle>PELUCHE</detalle>
+        <forma_pago>EFECTIVO</forma_pago>
+        <total>100</total>
+    </registro>
+</factura>
